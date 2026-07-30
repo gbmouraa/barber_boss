@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "aStGFlRj074=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Gabriel\\Workspace\\BarberBoss\\src\\BarberBoss.Api\\BarberBoss.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Gabriel\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.10\\microsoft.aspnetcore.openapi.10.0.10.nupkg.sha512",
+    "C:\\Users\\Gabriel\\.nuget\\packages\\microsoft.openapi\\2.7.5\\microsoft.openapi.2.7.5.nupkg.sha512",
+    "C:\\Users\\Gabriel\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\10.2.3\\swashbuckle.aspnetcore.swagger.10.2.3.nupkg.sha512",
+    "C:\\Users\\Gabriel\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\10.2.3\\swashbuckle.aspnetcore.swaggergen.10.2.3.nupkg.sha512",
+    "C:\\Users\\Gabriel\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\10.2.3\\swashbuckle.aspnetcore.swaggerui.10.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}

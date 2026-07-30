@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/BarberBoss.Api/BarberBoss.Api.csproj" Id="0256da4c-d040-49dc-8bf9-bb2f5a5e63a5" />
+  </Folder>
+  <Folder Name="/tests/" />
+</Solution>
