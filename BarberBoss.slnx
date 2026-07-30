@@ -1,6 +1,11 @@
 <Solution>
   <Folder Name="/src/">
+    <Project Path="src/BaberBoss.Application/BaberBoss.Application.csproj" Id="83794db9-4342-4db5-8b67-5902e6843b09" />
     <Project Path="src/BarberBoss.Api/BarberBoss.Api.csproj" Id="0256da4c-d040-49dc-8bf9-bb2f5a5e63a5" />
+    <Project Path="src/BarberBoss.Communication/BarberBoss.Communication.csproj" Id="9384ff80-8fbf-49da-9f02-552077f6d701" />
+    <Project Path="src/BarberBoss.Domain/BarberBoss.Domain.csproj" Id="4c2f212b-ff74-4a7e-8282-77e6e44e9c39" />
+    <Project Path="src/BarberBoss.Exception/BarberBoss.Exception.csproj" Id="e4cfbbe4-fc6f-495e-bb32-a77c9fd138fc" />
+    <Project Path="src/BarberBoss.Infrastructure/BarberBoss.Infrastructure.csproj" Id="3e2b55fd-c51d-4848-af09-3d8796397830" />
   </Folder>
   <Folder Name="/tests/" />
 </Solution>

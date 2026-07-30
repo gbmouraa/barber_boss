@@ -87,6 +87,51 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "BaberBoss.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "BarberBoss.Communication": "1.0.0",
+          "BarberBoss.Domain": "1.0.0",
+          "BarberBoss.Exception": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BaberBoss.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BaberBoss.Application.dll": {}
+        }
+      },
+      "BarberBoss.Communication/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/BarberBoss.Communication.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BarberBoss.Communication.dll": {}
+        }
+      },
+      "BarberBoss.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/BarberBoss.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BarberBoss.Domain.dll": {}
+        }
+      },
+      "BarberBoss.Exception/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/BarberBoss.Exception.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BarberBoss.Exception.dll": {}
+        }
       }
     }
   },
@@ -189,10 +234,33 @@
         "swashbuckle.aspnetcore.swaggerui.10.2.3.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "BaberBoss.Application/1.0.0": {
+      "type": "project",
+      "path": "../BaberBoss.Application/BaberBoss.Application.csproj",
+      "msbuildProject": "../BaberBoss.Application/BaberBoss.Application.csproj"
+    },
+    "BarberBoss.Communication/1.0.0": {
+      "type": "project",
+      "path": "../BarberBoss.Communication/BarberBoss.Communication.csproj",
+      "msbuildProject": "../BarberBoss.Communication/BarberBoss.Communication.csproj"
+    },
+    "BarberBoss.Domain/1.0.0": {
+      "type": "project",
+      "path": "../BarberBoss.Domain/BarberBoss.Domain.csproj",
+      "msbuildProject": "../BarberBoss.Domain/BarberBoss.Domain.csproj"
+    },
+    "BarberBoss.Exception/1.0.0": {
+      "type": "project",
+      "path": "../BarberBoss.Exception/BarberBoss.Exception.csproj",
+      "msbuildProject": "../BarberBoss.Exception/BarberBoss.Exception.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "BaberBoss.Application >= 1.0.0",
+      "BarberBoss.Communication >= 1.0.0",
+      "BarberBoss.Exception >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 10.0.10",
       "Swashbuckle.AspNetCore.SwaggerGen >= 10.2.3",
       "Swashbuckle.AspNetCore.SwaggerUI >= 10.2.3"
@@ -230,7 +298,17 @@
         "net10.0": {
           "framework": "net10.0",
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Gabriel\\Workspace\\BarberBoss\\src\\BaberBoss.Application\\BaberBoss.Application.csproj": {
+              "projectPath": "C:\\Users\\Gabriel\\Workspace\\BarberBoss\\src\\BaberBoss.Application\\BaberBoss.Application.csproj"
+            },
+            "C:\\Users\\Gabriel\\Workspace\\BarberBoss\\src\\BarberBoss.Communication\\BarberBoss.Communication.csproj": {
+              "projectPath": "C:\\Users\\Gabriel\\Workspace\\BarberBoss\\src\\BarberBoss.Communication\\BarberBoss.Communication.csproj"
+            },
+            "C:\\Users\\Gabriel\\Workspace\\BarberBoss\\src\\BarberBoss.Exception\\BarberBoss.Exception.csproj": {
+              "projectPath": "C:\\Users\\Gabriel\\Workspace\\BarberBoss\\src\\BarberBoss.Exception\\BarberBoss.Exception.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

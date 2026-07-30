@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Gabriel\\Workspace\\BarberBoss\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{83794DB9-4342-4DB5-8B67-5902E6843B09}|src\\BaberBoss.Application\\BaberBoss.Application.csproj|c:\\users\\gabriel\\workspace\\barberboss\\src\\baberboss.application\\baberboss.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{83794DB9-4342-4DB5-8B67-5902E6843B09}|src\\BaberBoss.Application\\BaberBoss.Application.csproj|solutionrelative:src\\baberboss.application\\baberboss.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0256DA4C-D040-49DC-8BF9-BB2F5A5E63A5}|src\\BarberBoss.Api\\BarberBoss.Api.csproj|c:\\users\\gabriel\\workspace\\barberboss\\src\\barberboss.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{0256DA4C-D040-49DC-8BF9-BB2F5A5E63A5}|src\\BarberBoss.Api\\BarberBoss.Api.csproj|solutionrelative:src\\barberboss.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -26,8 +30,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 379,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BaberBoss.Application",
+              "DocumentMoniker": "C:\\Users\\Gabriel\\Workspace\\BarberBoss\\src\\BaberBoss.Application\\BaberBoss.Application.csproj",
+              "RelativeDocumentMoniker": "src\\BaberBoss.Application\\BaberBoss.Application.csproj",
+              "ToolTip": "C:\\Users\\Gabriel\\Workspace\\BarberBoss\\src\\BaberBoss.Application\\BaberBoss.Application.csproj",
+              "RelativeToolTip": "src\\BaberBoss.Application\\BaberBoss.Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-07-30T23:27:39.722Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -50,7 +67,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\Gabriel\\Workspace\\BarberBoss\\src\\BarberBoss.Api\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "src\\BarberBoss.Api\\Properties\\launchSettings.json",
@@ -63,7 +80,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\Gabriel\\Workspace\\BarberBoss\\src\\BarberBoss.Api\\appsettings.Development.json",
               "RelativeDocumentMoniker": "src\\BarberBoss.Api\\appsettings.Development.json",
@@ -71,12 +88,11 @@
               "RelativeToolTip": "src\\BarberBoss.Api\\appsettings.Development.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-07-30T23:17:09.353Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-30T23:17:09.353Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Gabriel\\Workspace\\BarberBoss\\src\\BarberBoss.Api\\appsettings.json",
               "RelativeDocumentMoniker": "src\\BarberBoss.Api\\appsettings.json",
@@ -84,12 +100,11 @@
               "RelativeToolTip": "src\\BarberBoss.Api\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-07-30T23:17:06.884Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-30T23:17:06.884Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Gabriel\\Workspace\\BarberBoss\\src\\BarberBoss.Api\\Program.cs",
               "RelativeDocumentMoniker": "src\\BarberBoss.Api\\Program.cs",
@@ -97,8 +112,7 @@
               "RelativeToolTip": "src\\BarberBoss.Api\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-30T23:14:39.772Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-30T23:14:39.772Z"
             }
           ]
         }
