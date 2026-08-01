@@ -18,6 +18,8 @@ namespace BaberBoss.Application.UseCases.Billings.Create
 
         public async Task Execute(CreateBillingRequest request)
         {
+            Validate(request);
+
             Billing billing = new Billing
             {
                 Id = new Guid(),
@@ -33,6 +35,17 @@ namespace BaberBoss.Application.UseCases.Billings.Create
 
             await _repository.Create(billing);
             await _unitOfWork.Commit();
+        }
+
+        private void Validate(CreateBillingRequest request)
+        {
+            var validator = new BillingValidator();
+            var result = validator.Validate(request);
+
+            if (!result.IsValid)
+            {
+                throw new Exception(string.Join(" ", result.Errors.Select(x => x.ErrorMessage).ToList()));
+            }
         }
     }
 }
