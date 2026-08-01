@@ -16,6 +16,7 @@
     <ProjectReference Include="..\BaberBoss.Application\BaberBoss.Application.csproj" />
     <ProjectReference Include="..\BarberBoss.Communication\BarberBoss.Communication.csproj" />
     <ProjectReference Include="..\BarberBoss.Exception\BarberBoss.Exception.csproj" />
+    <ProjectReference Include="..\BarberBoss.Infrastructure\BarberBoss.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
