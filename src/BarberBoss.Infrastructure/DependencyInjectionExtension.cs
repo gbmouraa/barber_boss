@@ -1,4 +1,5 @@
-﻿using BarberBoss.Domain.Repositories.Billing;
+﻿using BarberBoss.Domain.Repositories;
+using BarberBoss.Domain.Repositories.Billing;
 using BarberBoss.Infrastructure.DataAccess;
 using BarberBoss.Infrastructure.DataAccess.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -18,6 +19,7 @@ namespace BarberBoss.Infrastructure
         private static void AddRepositories(IServiceCollection service)
         {
             service.AddScoped<IBillingRepository, BillingRepository>();
+            service.AddScoped<IUnitOfWork, UnitOfWork>();
         }
 
         private static void AddDbContext(IServiceCollection service, IConfiguration configuration)

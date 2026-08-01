@@ -1,5 +1,6 @@
 ﻿using BarberBoss.Communication.Requests.Billing;
 using BarberBoss.Domain.Entities;
+using BarberBoss.Domain.Repositories;
 using BarberBoss.Domain.Repositories.Billing;
 
 namespace BaberBoss.Application.UseCases.Billings.Create
@@ -7,10 +8,12 @@ namespace BaberBoss.Application.UseCases.Billings.Create
     public class CreateBillingUseCase : ICreateBillingUseCase
     {
         private readonly IBillingRepository _repository;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public CreateBillingUseCase(IBillingRepository repository)
+        public CreateBillingUseCase(IBillingRepository repository, IUnitOfWork unitOfWork)
         {
             _repository = repository;
+            _unitOfWork = unitOfWork;
         }
 
         public async Task Execute(CreateBillingRequest request)
@@ -29,6 +32,7 @@ namespace BaberBoss.Application.UseCases.Billings.Create
             };
 
             await _repository.Create(billing);
+            await _unitOfWork.Commit();
         }
     }
 }
