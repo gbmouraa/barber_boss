@@ -1,5 +1,6 @@
 ﻿using BaberBoss.Application.UseCases.Billings.Create;
 using BarberBoss.Communication.Requests.Billing;
+using BarberBoss.Exception;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BarberBoss.Api.Controllers
@@ -10,7 +11,7 @@ namespace BarberBoss.Api.Controllers
     {
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(ErrorOnValidationException), StatusCodes.Status400BadRequest)]
         public async Task<ActionResult> Create(CreateBillingRequest request, [FromServices] ICreateBillingUseCase useCase)
         {
             await useCase.Execute(request);

@@ -1,4 +1,5 @@
 using BaberBoss.Application;
+using BarberBoss.Api.Filters;
 using BarberBoss.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +10,8 @@ builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddMvc(options => options.Filters.Add(typeof(ExceptionFilter)));
 
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);

@@ -2,6 +2,7 @@
 using BarberBoss.Domain.Entities;
 using BarberBoss.Domain.Repositories;
 using BarberBoss.Domain.Repositories.Billing;
+using BarberBoss.Exception;
 
 namespace BaberBoss.Application.UseCases.Billings.Create
 {
@@ -44,7 +45,7 @@ namespace BaberBoss.Application.UseCases.Billings.Create
 
             if (!result.IsValid)
             {
-                throw new Exception(string.Join(" ", result.Errors.Select(x => x.ErrorMessage).ToList()));
+                throw new ErrorOnValidationException(result.Errors.Select(x => x.ErrorMessage).ToList());
             }
         }
     }
