@@ -12,8 +12,8 @@ namespace BarberBoss.Domain.Entities
         public decimal Amount { get; set; }
         public PaymentMethodEnum PaymentMethod { get; set; }
         public BillingStatusEnum Status { get; set; }
-        public string Notes { get; set; }
+        public string? Notes { get; set; }
         public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
     }
 }

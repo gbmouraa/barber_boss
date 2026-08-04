@@ -1,4 +1,6 @@
-﻿using BarberBoss.Communication.Requests.Billing;
+﻿using AutoMapper;
+using BaberBoss.Application.AutoMapper;
+using BarberBoss.Communication.Requests.Billing;
 using BarberBoss.Domain.Entities;
 using BarberBoss.Domain.Repositories;
 using BarberBoss.Domain.Repositories.Billing;
@@ -10,29 +12,21 @@ namespace BaberBoss.Application.UseCases.Billings.Create
     {
         private readonly IBillingRepository _repository;
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IMapper _mapper;
 
-        public CreateBillingUseCase(IBillingRepository repository, IUnitOfWork unitOfWork)
+        public CreateBillingUseCase(IBillingRepository repository, IUnitOfWork unitOfWork, IMapper mapper)
         {
             _repository = repository;
             _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
 
         public async Task Execute(CreateBillingRequest request)
         {
             Validate(request);
 
-            Billing billing = new Billing
-            {
-                Id = new Guid(),
-                Date = request.Date,
-                BarberName = request.BarberName,
-                ClientName = request.ClientName,
-                ServiceName = request.ServiceName,
-                Amount = request.Amount,
-                PaymentMethod = (BarberBoss.Domain.Enums.PaymentMethodEnum)request.PaymentMethod,
-                Status = (BarberBoss.Domain.Enums.BillingStatusEnum)request.Status,
-                CreatedAt = DateTime.Now
-            };
+            var billing = _mapper.Map<Billing>(request);
+            billing.CreatedAt = DateTime.Now;
 
             await _repository.Create(billing);
             await _unitOfWork.Commit();
