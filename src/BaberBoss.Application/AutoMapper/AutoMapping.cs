@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using BarberBoss.Communication.Requests.Billing;
+using BarberBoss.Communication.Responses;
+using BarberBoss.Domain.Dtos;
 using BarberBoss.Domain.Entities;
 
 namespace BaberBoss.Application.AutoMapper
@@ -9,8 +11,18 @@ namespace BaberBoss.Application.AutoMapper
         public AutoMapping()
         {
             RequestToEntity();
+            RequestToDto();
+            EntityToResponse();
         }
 
         private void RequestToEntity() => CreateMap<CreateBillingRequest, Billing>();
+
+        // fazer validação dos filtros vindos da request
+        private void RequestToDto() => CreateMap<GetBillingsRequest, GetBillingsFilterDto>();
+
+        private void EntityToResponse()
+        {
+            CreateMap<Billing, BillingResponse>();
+        }
     }
 }
