@@ -19,13 +19,22 @@ namespace BaberBoss.Application.UseCases.Billings.Get
 
         public async Task<BillingListResponse> Execute(GetBillingsRequest request)
         {
+            request = ValidateRequestPageAndPageSize(request);
             var dto = _mapper.Map<GetBillingsFilterDto>(request);
             var result = await _repository.Get(dto);
 
             return new BillingListResponse
-            {              // mapea a lista de billing response a partit do resultado
+            {   // mapea a lista de billing response a partit do resultado
                 Billings = _mapper.Map<List<BillingResponse>>(result)
             };
+        }
+
+        private GetBillingsRequest ValidateRequestPageAndPageSize(GetBillingsRequest request)
+        {
+            if (request.PageSize <= 0) request.PageSize = 5;
+            if (request.Page <= 0) request.Page = 1;
+
+            return request;
         }
     }
 }

@@ -2,10 +2,10 @@
 
 namespace BarberBoss.Domain.Dtos
 {
-    public class GetBillingsFilterDto // onde criar a validacao para Page e PageSize no auto mapper
+    public class GetBillingsFilterDto
     {
-        public int Page { get; set; } = 1;
-        public int PageSize { get; set; } = 10;
+        public int Page { get; set; }
+        public int PageSize { get; set; }
         public string? BarberName { get; set; }
         public string? ClientName { get; set; }
         public PaymentMethodEnum? PaymentMethod { get; set; }

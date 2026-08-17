@@ -17,8 +17,10 @@ namespace BaberBoss.Application.AutoMapper
 
         private void RequestToEntity() => CreateMap<CreateBillingRequest, Billing>();
 
-        // fazer validação dos filtros vindos da request
-        private void RequestToDto() => CreateMap<GetBillingsRequest, GetBillingsFilterDto>();
+        private void RequestToDto()
+        {
+            CreateMap<GetBillingsRequest, GetBillingsFilterDto>();
+        }
 
         private void EntityToResponse()
         {
