@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using BarberBoss.Communication.Responses;
 using BarberBoss.Domain.Repositories.Billing;
+using BarberBoss.Exception;
 
 namespace BaberBoss.Application.UseCases.Billings.GetById
 {
@@ -19,7 +20,10 @@ namespace BaberBoss.Application.UseCases.Billings.GetById
         {
             var result = await _repository.GetById(id);
 
-            if (result is null) { } // criar NotFoundEx
+            if (result is null)
+            {
+                throw new NotFoundException("Nenhuma despesa encontrada para o ID informado.");
+            }
 
             return _mapper.Map<BillingResponse>(result);
         }

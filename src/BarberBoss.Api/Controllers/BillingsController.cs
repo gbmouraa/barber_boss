@@ -3,6 +3,7 @@ using BaberBoss.Application.UseCases.Billings.Get;
 using BaberBoss.Application.UseCases.Billings.GetById;
 using BarberBoss.Communication.Requests.Billing;
 using BarberBoss.Communication.Responses;
+using BarberBoss.Exception;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BarberBoss.Api.Controllers
@@ -20,15 +21,18 @@ namespace BarberBoss.Api.Controllers
             return Ok();
         }
 
-        [HttpGet] // documentar retornos
+        [HttpGet]
+        [ProducesResponseType(typeof(BillingListResponse),StatusCodes.Status200OK)]
         public async Task<ActionResult> Get([FromQuery] GetBillingsRequest request, [FromServices] IGetBillingUseCase useCase)
         {
             var result = await useCase.Execute(request);
             return Ok(result);
         }
 
-        [HttpGet] // documentar retornos
+        [HttpGet]
         [Route("{id}")]
+        [ProducesResponseType(typeof(NotFoundException),StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(BillingResponse), StatusCodes.Status200OK)]
         public async Task<ActionResult> GetById([FromRoute] Guid id, [FromServices] IGetBillingByIdUseCase useCase)
         {
             var result = await useCase.Execute(id);
