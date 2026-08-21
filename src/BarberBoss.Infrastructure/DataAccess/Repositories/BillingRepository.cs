@@ -50,5 +50,10 @@ namespace BarberBoss.Infrastructure.DataAccess.Repositories
                 .Where(x => x.Id == id)
                 .FirstOrDefaultAsync();
         }
+
+        public void Update(Billing billing)
+        {
+            _dbContext.Billings.Update(billing);
+        }
     }
 }

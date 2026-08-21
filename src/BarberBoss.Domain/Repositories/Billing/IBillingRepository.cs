@@ -7,5 +7,6 @@ namespace BarberBoss.Domain.Repositories.Billing
         Task Create(Entities.Billing billing);
         Task<Entities.Billing> GetById(Guid id);
         Task<List<Entities.Billing>> Get(GetBillingsFilterDto filter);
+        void Update(Entities.Billing billing);
     }
 }

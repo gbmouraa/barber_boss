@@ -15,7 +15,21 @@ namespace BaberBoss.Application.AutoMapper
             EntityToResponse();
         }
 
-        private void RequestToEntity() => CreateMap<CreateBillingRequest, Billing>();
+        private void RequestToEntity()
+        {
+            CreateMap<CreateBillingRequest, Billing>();
+
+            // faz a verificação em cada propiedade de UpdateBillingRequest
+            // são mapeadas para a entidade somente as que são diferente de null
+            CreateMap<UpdateBillingRequest, Billing>()
+                .ForMember(
+                    dest => dest.Amount,
+                    opt => opt.Condition(src => src.Amount.HasValue)
+                )
+                .ForAllMembers(
+                    opt => opt.Condition((src, dest, srcMember) => srcMember != null)
+                );
+        }
 
         private void RequestToDto()
         {
