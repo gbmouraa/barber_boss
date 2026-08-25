@@ -25,7 +25,7 @@ namespace BaberBoss.Application.UseCases.Billings.Update
             var billing = await _repository.GetById(id);
 
             if (billing is null)
-                throw new NotFoundException("Nenhuma despensa encontrada para o ID informado.");
+                throw new NotFoundException("Nenhuma despesa encontrada para o ID informado.");
 
             // o mapping está transformando null em 0;
             if (request.Amount is null)

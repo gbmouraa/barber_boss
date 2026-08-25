@@ -20,6 +20,17 @@ namespace BarberBoss.Infrastructure.DataAccess.Repositories
             await _dbContext.SaveChangesAsync();
         }
 
+        public async Task<bool> Delete(Guid id)
+        {
+            var billing = await GetById(id);
+
+            if (billing == null)
+                return false;
+
+            _dbContext.Billings.Remove(billing);
+            return true;
+        }
+
         public async Task<List<Billing>> Get(GetBillingsFilterDto filter)
         {
             // usado para montar a query

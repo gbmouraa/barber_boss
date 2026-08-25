@@ -1,5 +1,6 @@
 ﻿using BaberBoss.Application.AutoMapper;
 using BaberBoss.Application.UseCases.Billings.Create;
+using BaberBoss.Application.UseCases.Billings.Delete;
 using BaberBoss.Application.UseCases.Billings.Get;
 using BaberBoss.Application.UseCases.Billings.GetById;
 using BaberBoss.Application.UseCases.Billings.Update;
@@ -15,6 +16,7 @@ namespace BaberBoss.Application
             service.AddScoped<IGetBillingUseCase, GetBillingUseCase>();
             service.AddScoped<IGetBillingByIdUseCase, GetBillingByIdUseCase>();
             service.AddScoped<IUpdateBillingUseCase, UpdateBillingUseCase>();
+            service.AddScoped<IDeleteBillingUseCase, DeleteBillingUseCase>();
 
             service.AddAutoMapper(cfg => cfg.AddProfile<AutoMapping>());
         }
